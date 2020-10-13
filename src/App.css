@@ -1,10 +1,13 @@
+/* main app css parent */
 .App {
   text-align: center;
+  background-color: #bfbfbf;
 }
 
+/* default Graston header reduced min-height size but left banner in */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +16,110 @@
   color: white;
 }
 
+/* default Graston link color setup */
 .App-link {
   color: #61dafb;
+}
+
+/* set header font size to relative size to make larger for desktop */
+h1 {
+  font-size: 3em;
+}
+
+/* set search bar and select form margin for spacing and sizing specs */
+input {
+  margin-right: 3em;
+  font-size: 1.5em;
+  width: 60vw;
+}
+
+/* set up flexbox for display grid of character cards */
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 2em;  
+}
+
+/* set cards to also be somewhat dynamic */
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  border: 3px solid black;    
+}
+
+/* set height to standard image size for this particular api and made border to distinguish cards */
+.card-image {
+  border-bottom: 3px solid black;
+  height: 300px;
+}
+
+/* set card background color for nice contrast */
+.card-details {
+  background: #9b9b9b;
+}
+
+/* remove list styles to remove bullet points to avoid bad UI */
+.card-details-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* set select form label to dynamic font size */
+.filter-label {  
+  font-size: 1.2em;
+}
+
+/* set to flexbox to add spacing to label and select form */
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+}
+
+/* set width and font-size to make it easier to read */
+select {
+  width: 20vw;
+  font-size: 1.2em;
+}
+
+/* set all buttons to same size and dynamic font size */
+button {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  width: 20vw;
+  background-color: seagreen;
+}
+
+/* make navigation buttons flex box display for spacing and sizing */
+.nav-button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90vw;
+}
+
+/* adjusted some css to be slightly more mobile friendly like changine flex direction  */
+@media (max-width: 600px) {
+  .search input {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .search input,
+  .search button {
+    width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
